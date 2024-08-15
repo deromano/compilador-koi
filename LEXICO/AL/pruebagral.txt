@@ -1,0 +1,63 @@
+/# TOKENS SENCILLOS #/
+;
+:=
++
+-
+*
+/
+++
+&
+|
+!
+==
+<>
+<
+<=
+>
+>=
+(
+)
+[
+]
+
+/# TOKEN ID Y CAMPO#/
+A
+ABC
+A1
+ESTRUCTURA.CAMPO
+
+/# TOKENS DE CONSTANTES #/
+3
+123
+.
+12.
+34. 67
+234.456
+'unaCadena'
+'frhyhyj'
+'gt grS@1gth' 'GTD'
+'tr	123'
+
+/# TOKENS DE PALABRAS RESERVADAS #/
+comenzar
+final
+declarar
+findeclarar
+si
+hacer
+finsi
+sino
+mientras
+estru
+poner
+tomar
+finmientras
+entero
+real
+cadena
+const
+booleano
+falso
+verdadero
+truncar
+redondear

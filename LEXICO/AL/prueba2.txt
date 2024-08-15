@@ -1,0 +1,14 @@
+declarar
+
+entero ALTURA;
+real ANCHO;
+booleano ORIGINAL;
+cadena MENSAJE;
+
+estru CAMINO[3](cadena CAMINO.PROVINCIA;entero CAMINO.KILOMETRO;booleano CAMINO.PAVIMENTADO);
+
+findeclarar.
+
+'comentario'
+
+VARIABLELARGA

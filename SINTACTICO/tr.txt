@@ -1,0 +1,182 @@
+char* polaca[1000] = {};
+int indicePolaca = 0;
+
+int* pilaTipos = {};
+int indicePilaTipos = 0;
+
+int tipo = 0;
+
+int tipoSuma[4][4] = {{-1,-1,-1,-1}, {-1,1,2,-1}, {-1,2,2,-1}, {-1,-1,-1,-1}};
+int tipoResta[4][4] = {{-1,-1,-1,-1}, {-1,1,2,-1}, {-1,2,2,-1}, {-1,-1,-1,-1}};
+int tipoMultiplicacion[4][4] = {{-1,-1,-1,-1}, {-1,1,2,-1}, {-1,2,2,-1}, {-1,-1,-1,-1}};
+int tipoDivision[4][4] = {{-1,-1,-1,-1}, {-1,2,2,-1}, {-1,2,2,-1}, {-1,-1,-1,-1}};
+int tipoComparacion[4][4] = {{-1,-1,-1,-1}, {-1,0,0,-1}, {-1,0,0,-1}, {-1,-1,-1,-1}};
+int tipoDisyuncion[4][4] = {{0,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,-1}};
+int tipoConjuncion[4][4] = {{0,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,-1}};
+int tipoConcatenacion[4][4] = {{-1,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,-1}, {-1,-1,-1,3}};
+int tipoAsignacion[4][4] = {{0,0,0,0}, {0,0,0,0}, {0,0,0,0}, {0,0,0,0}};
+
+comprobarTiposConc(); ponerEnPolaca("++");
+comprobarTiposSuma(); ponerEnPolaca("+");
+comprobarTiposResta(); ponerEnPolaca("-");
+comprobarTipoMultiplicacion(); ponerEnPolaca("*");
+comprobarTiposDivision(); ponerEnPolaca("/");
+
+int comprobarTiposConc(){
+}
+
+int comprobarTiposSuma(){
+	return tipoSuma[desapilar()][desapilar()];
+}
+
+int comprobarTiposResta(){
+	return tipoResta[desapilar()][desapilar()];
+}
+
+int comprobarTipoMultiplicacion(){
+	return tipoMultiplicacion[desapilar()][desapilar()];
+}
+
+int comprobarTiposDivision(){
+	return tipoDivision[desapilar()][desapilar()];
+}
+
+ponerEnPolaca(palabra);
+ponerEnPolaca(palabra);
+ponerEnPolaca("+");
+ponerEnPolaca("+");
+
+void apilarTipo(){
+	pilaTipos[indicePilaTipos] = tipo;
+	indicePilaTipos++;
+}
+
+int desapilarTipo(){
+	indicePilaTipos--;
+	return pilaTipos[indicePilaTipos];
+}
+
+void ponerEnPolaca(char* unaCadena){
+	polaca[indice] = unaCadena;
+	indicePolaca++;
+}
+
+int indiceEnTablaDeSimbolos(){
+	
+}
+
+void generarPolaca();
+
+
+char* polacaInversa[1000];
+longitudPolaca = 0;
+
+void generarAssembler(){
+
+fprintf(".CODE", archivoAssembler);.CODE
+fprintf("mov AX,@DATA", archivoAssembler);
+fprintf("mov DS,AX", archivoAssembler);
+
+fprintf("mov ax, 4C00h", archivoAssembler);
+fprintf("int 21h", archivoAssembler);
+fprintf("END", archivoAssembler);
+
+
+	
+}
+
+
+Si encuentra un identificador o una constante lo carga en el coprocesador matematico.
+Las declaraciones de variables agregan variables en el código assembler.
+
+int tablaDeTipos[100];
+
+void 
+
+void ensamblarZonaDeDeclaracion(){
+	fprintf(".MODEL LARGE\n", archivoAssembler);
+	fprintf(".386\n", archivoAssembler);
+	fprintf(".STACK 200h\n", archivoAssembler);
+	fprintf(".DATA\n", archivoAssembler);
+	for(i = 0; i < cantidadDeItem; i++){
+		fprintf("%s", tablaDeSimbolos[i], archivoAssembler);
+	}
+}
+
+void leerTablaDeSimbolos(){
+	
+		
+
+}
+
+
+
+guardarEnPolaca();
+
+
+char* polacaInversa[1000];
+int punteroPolaca = 0;
+
+for(i=0; i < 1000; i++){
+	polacaInversa[i] = "";
+}
+
+escribirEnPolaca(char* algo){
+	switch(token){
+		case ID: {polacaInversa[punteroPolaca] = palabra;
+		break;
+		case CAMPO: polacaInversa[punteroPolaca] = palabra;
+		break;
+		default: polacaInversa[punteroPolaca] = algo;
+		break;
+	} 
+	punteroPolaca++;
+}
+
+void generarPolaca();
+
+
+char* polacaInversa[1000];
+longitudPolaca = 0;
+
+void generarAssembler(){
+
+fprintf(".CODE", archivoAssembler);.CODE
+fprintf("mov AX,@DATA", archivoAssembler);
+fprintf("mov DS,AX", archivoAssembler);
+
+fprintf("mov ax, 4C00h", archivoAssembler);
+fprintf("int 21h", archivoAssembler);
+fprintf("END", archivoAssembler);
+
+
+	
+}
+
+
+Si encuentra un identificador o una constante lo carga en el coprocesador matematico.
+Las declaraciones de variables agregan variables en el código assembler.
+
+int tablaDeTipos[100];
+
+void 
+
+void ensamblarZonaDeDeclaracion(){
+	fprintf(".MODEL LARGE\n", archivoAssembler);
+	fprintf(".386\n", archivoAssembler);
+	fprintf(".STACK 200h\n", archivoAssembler);
+	fprintf(".DATA\n", archivoAssembler);
+	for(i = 0; i < cantidadDeItem; i++){
+		fprintf("%s", tablaDeSimbolos[i], archivoAssembler);
+	}
+}
+
+void leerTablaDeSimbolos(){
+	
+		
+
+}
+
+
+
+guardarEnPolaca();

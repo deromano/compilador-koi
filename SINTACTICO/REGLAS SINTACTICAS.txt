@@ -1,0 +1,91 @@
+REGLAS SINTACTICAS
+--------------------------
+
+programa: ejecucion;
+programa: zona_declaracion ejecucion;
+
+ejecucion: COMENZAR bloque FINAL;
+
+zona_declaracion: DECLARAR declaraciones FINDECLARAR; {ensamblarZonaDeDeclaracion();}
+
+bloque: sentencia;
+bloque: bloque sentencia;
+
+declaraciones: declaracion;
+declaraciones: declaraciones declaracion;
+
+sentencia: asignacion PUNTOYCOMA;
+sentencia: seleccion PUNTOYCOMA;
+sentencia: iteracion PUNTOYCOMA;
+sentencia: io PUNTOYCOMA;
+
+declaracion: tipo ids PUNTOYCOMA;
+declaracion: estructura PUNTOYCOMA;
+
+asignacion: ID ASIG expresion;
+asignacion: CONST ID ASIG expresion;
+asignacion: CAMPO ASIG expresion;
+
+seleccion: SI condicion HACER bloque;
+seleccion: SI condicion HACER bloque SINO bloque;
+
+iteracion: MIENTRAS condicion HACER bloque FINMIENTRAS;
+
+io: PONER ID;
+io: PONER CTE_ENT;
+io: PONER CTE_REAL;
+io: PONER CTE_CAD;
+io: PONER CAMPO;
+io: TOMAR ID;
+io: TOMAR CAMPO;
+
+tipo: ENTERO;
+tipo: REAL;
+tipo: CADENA;
+tipo: BOOLEANO;
+
+ids: ID;
+ids: ids ID;
+
+estructura: ESTRU ID C_ABRE CTE_ENT C_CIERRA P_ABRE campos P_CIERRA;
+
+expresion: termino;
+expresion: expresion SUM termino;
+expresion: expresion RES termino;
+expresion: concatenacion;
+expresion: condicion;
+
+condicion: comparacion;
+condicion: comparacion OP_Y comparacion;
+condicion: comparacion OP_O comparacion;
+
+campos: declaracion_campo;
+campos: campos declaracion_campo;
+
+termino: factor;
+termino: termino MUL factor;
+termino: termino DIV factor;
+
+concatenacion: CTE_CAD;
+concatenacion: ID;
+concatenacion: CAMPO;
+concatenacion: concatenacion CONC concatenacion;
+
+comparacion: expresion IGUAL expresion;
+comparacion: expresion DISTINTO expresion;
+comparacion: expresion MENOR expresion;
+comparacion: expresion MENORIGUAL expresion;
+comparacion: expresion MAYOR expresion;
+comparacion: expresion MAYORIGUAL expresion;
+comparacion: FALSO;
+comparacion: VERDADERO;
+comparacion: ID;
+comparacion: CAMPO;
+
+declaracion_campo: tipo CAMPO PUNTOYCOMA;
+
+factor: P_ABRE expresion P_CIERRA;
+factor: CTE_ENT;
+factor: CTE_REAL;
+factor: ID;
+factor: CAMPO;

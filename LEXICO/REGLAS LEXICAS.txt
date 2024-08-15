@@ -1,0 +1,57 @@
+REGLAS LÉXICAS
+--------------------
+
+<PUNTOYCOMA> : ';'
+<ASIG> : ':='
+<SUM> : '+'
+<RES> : '-'
+<MUL> : '*'
+<DIV> : '/'
+<CONC> : '++'
+<OP_Y> : '&'
+<OP_O> : '|'
+<OP_N> : '!'
+<IGUAL> : '=='
+<DISTINTO> : '<>'
+<MENOR> : '<'
+<MENORIGUAL> : '<='
+<MAYOR> : '>'
+<MAYORIGUAL> : '>='
+<P_ABRE> : '('
+<P_CIERRA> : ')'
+<C_ABRE> : '['
+<C_CIERRA> : ']'
+
+<ID> : {letra_may}({letra_may}|{digito})*
+<CAMPO> : {letra_may}({letra_may}|{digito})* "." {letra_may}({letra_may}|{digito})*
+
+<CTE_ENT> : {digito}+
+
+<CTE_REAL> : {digito}* "." {digito}*
+
+<CTE_CAD> : "'" .* "'"
+
+<COMENZAR> : "comenzar"
+<FINAL> : "final"
+<DECLARAR> : "declarar"
+<FINDECLARAR> : "findeclarar"
+<SI> : "si"
+<HACER> : "hacer"
+<FINSI> : "finsi"
+<SINO> : "sino"
+<MIENTRAS> : "mientras"
+<ESTRU> : "estru"
+<PONER> : "poner"
+<TOMAR> : "tomar"
+<FINMIENTRAS> : "finmientras"
+<ENTERO> : "entero"
+<REAL> : "real"
+<CADENA> : "cadena"
+<BOOLEANO> : "booleano"
+<CONST> : "const"
+<FALSO> : "falso"
+<VERDADERO> : "verdadero"
+<TRUNCAR> : "truncar"
+<REDONDEAR> : "redondear"
+-------------------------------------
+22 PALABRAS RESERVADAS
